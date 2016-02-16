@@ -89,7 +89,7 @@ public class Main extends javax.swing.JFrame {
 			wrapper = presetList.getExtensionWrapperAt(presetList.getSelectedIndex());
 		else if(customList.getSelectedIndex() >= 0)
 			wrapper = customList.getExtensionWrapperAt(customList.getSelectedIndex());
-		Counter.counter(this, files, jCheckBoxMenuItem1.isSelected(), wrapper, jTextArea1);
+		Counter.counter(this, files, jCheckBoxMenuItem1.isSelected(),jCheckBoxMenuItem2.isSelected(), wrapper, jTextArea1);
     }
     
     private void initLists() {
@@ -168,6 +168,7 @@ public class Main extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -279,6 +280,9 @@ public class Main extends javax.swing.JFrame {
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("Count whitespace");
         jMenu3.add(jCheckBoxMenuItem1);
+        jCheckBoxMenuItem2.setSelected(false);
+        jCheckBoxMenuItem2.setText("Count comment");
+        jMenu3.add(jCheckBoxMenuItem2);
         jMenuBar1.add(jMenu3);
         
         //////////
@@ -360,6 +364,7 @@ public class Main extends javax.swing.JFrame {
     }
     
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private NewList presetList;
     private NewList customList;
     private javax.swing.JMenu jMenu1;
